@@ -67,9 +67,9 @@ namespace timecomplexity
         private static int[] GenerateRandomNumbers(int size)
         {
             var result = new int[size];
+            Random rnd = new Random();
             for (int i = 0; i < size; i++)
             {
-                Random rnd = new Random();
                 result[i] = rnd.Next(0, 10);
             }
 
