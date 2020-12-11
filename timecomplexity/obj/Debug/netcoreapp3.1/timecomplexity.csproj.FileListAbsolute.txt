@@ -9,3 +9,16 @@ C:\Users\gamer\source\repos\timecomplexity\timecomplexity\obj\Debug\netcoreapp3.
 C:\Users\gamer\source\repos\timecomplexity\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.AssemblyInfo.cs
 C:\Users\gamer\source\repos\timecomplexity\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.dll
 C:\Users\gamer\source\repos\timecomplexity\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.pdb
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\bin\Debug\netcoreapp3.1\timecomplexity.exe
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\bin\Debug\netcoreapp3.1\timecomplexity.deps.json
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\bin\Debug\netcoreapp3.1\timecomplexity.runtimeconfig.json
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\bin\Debug\netcoreapp3.1\timecomplexity.runtimeconfig.dev.json
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\bin\Debug\netcoreapp3.1\timecomplexity.dll
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\bin\Debug\netcoreapp3.1\timecomplexity.pdb
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.csprojAssemblyReference.cache
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.AssemblyInfoInputs.cache
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.AssemblyInfo.cs
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.csproj.CoreCompileInputs.cache
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.dll
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.pdb
+C:\Users\gamer\source\repos\NumbersOccurringOddNumberOfTimes\timecomplexity\obj\Debug\netcoreapp3.1\timecomplexity.genruntimeconfig.cache

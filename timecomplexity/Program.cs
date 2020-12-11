@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,87 +8,38 @@ namespace timecomplexity
 {
     class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
+            while (true)
+            {
+                Console.WriteLine("size of the array:");
+                var input = Console.ReadLine();
+                var numbers = GenerateRandomNumbers(int.Parse(input));
 
-            var _1000numbers = GenerateRandomNumbers(1000);
-            var _10000numbers = GenerateRandomNumbers(10000);
-            var _100000numbers = GenerateRandomNumbers(100000);
-            var _1000000numbers = GenerateRandomNumbers(1000000);
+                Stopwatch sw = new Stopwatch();
 
-            Stopwatch sw = new Stopwatch();
+                sw.Start();
+                var tableResult = FindOddNumbeOfTimes_HashTable(numbers);
+                sw.Stop();
+                Console.WriteLine("{0} numbers, hash table. Elapsed={1}", input, sw.ElapsedMilliseconds);
 
+                sw.Restart();
+                var linqResult = FindOddNumbeOfTimes_Linq(numbers);
+                sw.Stop();
+                Console.WriteLine("{0} numbers, linq. Elapsed={1}", input, sw.ElapsedMilliseconds);
 
-            // 1000 numbers
-            sw.Start();
-            var _1000hashTableResult = FindOddNumbeOfTimes_HashTable(_1000numbers);
-            sw.Stop();
-            Console.WriteLine("1000 bumbers, hash table. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            sw.Start();
-            var _1000linqResult = FindOddNumbeOfTimes_Linq(_1000numbers);
-            sw.Stop();
-            Console.WriteLine("1000 bumbers, ling. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            // 10000 numbers
-            sw.Start();
-            var _10000hashTableResult = FindOddNumbeOfTimes_HashTable(_10000numbers);
-            sw.Stop();
-            Console.WriteLine("10000 bumbers, hash table. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            sw.Start();
-            var _10000linqResult = FindOddNumbeOfTimes_Linq(_10000numbers);
-            sw.Stop();
-            Console.WriteLine("10000 bumbers, ling. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            // 100000 numbers
-            sw.Start();
-            var _100000hashTableResult = FindOddNumbeOfTimes_HashTable(_100000numbers);
-            sw.Stop();
-            Console.WriteLine("100000 bumbers, hash table. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            sw.Start();
-            var _100000linqResult = FindOddNumbeOfTimes_Linq(_100000numbers);
-            sw.Stop();
-            Console.WriteLine("100000 bumbers, ling. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            // 1000000 numbers
-            sw.Start();
-            var _1000000hashTableResult = FindOddNumbeOfTimes_HashTable(_1000000numbers);
-            sw.Stop();
-            Console.WriteLine("1000000 bumbers, hash table. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            sw.Reset();
-
-            sw.Start();
-            var _1000000linqResult = FindOddNumbeOfTimes_Linq(_1000000numbers);
-            sw.Stop();
-            Console.WriteLine("1000000 bumbers, ling. Elapsed={0}", sw.ElapsedMilliseconds);
-
-            Console.ReadLine();
+            }
         }
 
 
-        private static int[] FindOddNumbeOfTimes_Linq(int[] numbers)
+        private static  int[] FindOddNumbeOfTimes_Linq(int[] numbers)
         {
             return numbers.GroupBy(x => x).Select(y => new { Number = y.Key, Count = y.Count() }).Where(z => z.Count % 2 != 0).Select(h=>h.Number).ToArray();
         }
 
-        private static int[] FindOddNumbeOfTimes_HashTable(int[] numbers)
+        private static ArrayList FindOddNumbeOfTimes_HashTable(int[] numbers)
         {
-            var result = new List<int>();
+            var result = new ArrayList();
             Dictionary<int, int> hmap = new Dictionary<int, int>();
 
             for (int i = 0; i < numbers.Length; i++)
@@ -109,7 +61,7 @@ namespace timecomplexity
                     result.Add(entry.Key);
                 }
             }
-            return result.ToArray();
+            return result;
         }
 
         private static int[] GenerateRandomNumbers(int size)
